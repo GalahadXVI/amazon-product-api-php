@@ -102,7 +102,7 @@ class AmazonProductApiTest extends TestCase
         $http_client_prop->setValue($api, $client);
         
         // Call the getItems method
-        $result = $api->getItems(['B07PDHSJ1H'], [Resource::ITEM_INFO_TITLE]);
+        $result = $api->getItems(['B07PDHSJ1H'], [Resource::ITEM_INFOTITLE]);
         
         // Assert the result
         $this->assertEquals($mock_response, $result);
@@ -151,7 +151,8 @@ class AmazonProductApiTest extends TestCase
         $http_client_prop->setValue($api, $client);
         
         // Call the getItem method
-        $result = $api->getItem('B07PDHSJ1H', [Resource::ITEM_INFO_TITLE]);
+
+        $result = $api->getItem('B07PDHSJ1H', [Resource::ITEM_INFOTITLE]);
         
         // Assert the result
         $this->assertEquals($mock_response['ItemsResult']['Items'][0], $result);
