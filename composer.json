@@ -1,14 +1,9 @@
 {
-    "name": "galahadxvi/amazon-advertising-api-php",
+    "name": "galahadxvi/amazon-product-api-php",
     "description": "A lightweight PHP package for Amazon Product Advertising API 5.0",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Custom",
-            "email": "info@example.com"
-        }
-    ],
+    "author": "GalahadXVI",
     "require": {
         "php": ">=7.4",
         "guzzlehttp/guzzle": "^7.0"
