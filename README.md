@@ -35,7 +35,7 @@ composer require galahadxvi/amazon-product-api-php
 
 use Custom\AmazonAdvertisingApi\AmazonProductApi;
 use Custom\AmazonAdvertisingApi\Enums\Region;
-use Custom\AmazonAdvertisingApi\Enums\Resource;
+use Custom\AmazonAdvertisingApi\Enums\GetItems\Resource;
 
 // Initialize the client with your Amazon PA-API credentials
 $client = new AmazonProductApi(

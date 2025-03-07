@@ -23,11 +23,8 @@ $client = new AmazonProductApi(
 
 // Define resources to request
 $resources = [
-    Resource::ITEM_INFO_TITLE,
-    Resource::ITEM_INFO_FEATURES,
-    Resource::ITEM_INFO_BY_LINE_INFO,
-    Resource::IMAGES_PRIMARY,
-    Resource::OFFERS_LISTINGS
+    Resource::ITEM_INFOTITLE,
+    Resource::ITEM_INFOFEATURES,
 ];
 
 // Get a single product by ASIN
@@ -63,7 +60,7 @@ try {
 try {
     echo "\n\nFetching multiple products...\n";
     
-    $response = $client->getItems(['B07PDHSJ1H', 'B07G4MNFS1'], [Resource::ITEM_INFO_TITLE]);
+    $response = $client->getItems(['B07PDHSJ1H', 'B07G4MNFS1'], [Resource::ITEM_INFOTITLE]);
     
     if (isset($response['ItemsResult']['Items']) && !empty($response['ItemsResult']['Items'])) {
         echo "\nProducts found: " . count($response['ItemsResult']['Items']) . "\n";
