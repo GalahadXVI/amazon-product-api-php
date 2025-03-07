@@ -105,7 +105,7 @@ class AmazonProductApi
         $payload = [
             'ItemIds'     => $item_ids,
             'Resources'   => !empty($resources) ? $resources : [
-                Resource::ITEM_INFO_TITLE,
+                Resource::ITEM_INFOTITLE,
             ],
             'PartnerTag'  => $this->partner_tag,
             'PartnerType' => 'Associates',
