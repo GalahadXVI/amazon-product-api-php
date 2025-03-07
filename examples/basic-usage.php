@@ -3,8 +3,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use GalahadXVI\AmazonProductApi\AmazonProductApi;
+use GalahadXVI\AmazonProductApi\Enums\GetItems\Resource;
 use GalahadXVI\AmazonProductApi\Enums\Region;
-use GalahadXVI\AmazonProductApi\Enums\Resource;
 use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 
 // Replace with your own credentials

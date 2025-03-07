@@ -3,9 +3,8 @@
 namespace GalahadXVI\AmazonProductApi\Tests;
 
 use GalahadXVI\AmazonProductApi\AmazonProductApi;
+use GalahadXVI\AmazonProductApi\Enums\GetItems\Resource;
 use GalahadXVI\AmazonProductApi\Enums\Region;
-use GalahadXVI\AmazonProductApi\Enums\Resource;
-use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;

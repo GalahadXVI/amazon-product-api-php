@@ -3,6 +3,7 @@
 namespace GalahadXVI\AmazonProductApi;
 
 use GalahadXVI\AmazonProductApi\Authentication\AwsV4Signer;
+use GalahadXVI\AmazonProductApi\Enums\GetItems\Resource;
 use GalahadXVI\AmazonProductApi\Enums\Region;
 use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 use GuzzleHttp\Client;
@@ -104,9 +105,7 @@ class AmazonProductApi
         $payload = [
             'ItemIds'     => $item_ids,
             'Resources'   => !empty($resources) ? $resources : [
-                'ItemInfo.Title',
-                'Images.Primary',
-                'Offers.Listings',
+                Resource::ITEM_INFO_TITLE,
             ],
             'PartnerTag'  => $this->partner_tag,
             'PartnerType' => 'Associates',
