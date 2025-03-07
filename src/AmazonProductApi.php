@@ -15,7 +15,7 @@ use GuzzleHttp\Exception\GuzzleException;
  * 
  * @package Custom\AmazonAdvertisingApi
  */
-class AmazonAdvertisingApi
+class AmazonProductApi
 {
     /**
      * Amazon Product Advertising API service name

@@ -33,12 +33,12 @@ composer require custom/amazon-advertising-api
 ```php
 <?php
 
-use Custom\AmazonAdvertisingApi\AmazonAdvertisingApi;
+use Custom\AmazonAdvertisingApi\AmazonProductApi;
 use Custom\AmazonAdvertisingApi\Enums\Region;
 use Custom\AmazonAdvertisingApi\Enums\Resource;
 
 // Initialize the client with your Amazon PA-API credentials
-$client = new AmazonAdvertisingApi(
+$client = new AmazonProductApi(
     'YOUR_ACCESS_KEY',
     'YOUR_SECRET_KEY',
     'YOUR_PARTNER_TAG',
@@ -178,9 +178,9 @@ Future releases will add support for additional operations such as:
 While this package currently only supports the GetItems operation, you can extend the `AmazonAdvertisingApi` class to add support for additional operations:
 
 ```php
-use Custom\AmazonAdvertisingApi\AmazonAdvertisingApi;
+use Custom\AmazonAdvertisingApi\AmazonProductApi;
 
-class ExtendedAmazonApi extends AmazonAdvertisingApi
+class ExtendedAmazonApi extends AmazonProductApi
 {
     private const SEARCH_ITEMS_URI_PATH = '/paapi5/searchitems';
     private const SEARCH_ITEMS_TARGET = 'com.amazon.paapi5.v1.ProductAdvertisingAPIv1.SearchItems';

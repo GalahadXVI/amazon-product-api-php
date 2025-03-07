@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Custom\AmazonAdvertisingApi\AmazonAdvertisingApi;
+use Custom\AmazonAdvertisingApi\AmazonProductApi;
 use Custom\AmazonAdvertisingApi\Enums\Region;
 use Custom\AmazonAdvertisingApi\Enums\Resource;
 use Custom\AmazonAdvertisingApi\Exception\AmazonAdvertisingApiException;
@@ -14,7 +14,7 @@ $partner_tag = 'YOUR_PARTNER_TAG'; // Your Amazon Associate tag
 $country_code = Region::UNITED_STATES; // or any other supported region
 
 // Initialize the client
-$client = new AmazonAdvertisingApi(
+$client = new AmazonProductApi(
     $access_key,
     $secret_key,
     $partner_tag,

@@ -2,7 +2,7 @@
 
 namespace Custom\AmazonAdvertisingApi\Tests;
 
-use Custom\AmazonAdvertisingApi\AmazonAdvertisingApi;
+use Custom\AmazonAdvertisingApi\AmazonProductApi;
 use Custom\AmazonAdvertisingApi\Enums\Region;
 use Custom\AmazonAdvertisingApi\Enums\Resource;
 use Custom\AmazonAdvertisingApi\Exception\AmazonAdvertisingApiException;
@@ -21,7 +21,7 @@ use ReflectionClass;
  * 
  * @package Custom\AmazonAdvertisingApi\Tests
  */
-class AmazonAdvertisingApiTest extends TestCase
+class AmazonProductApiTest extends TestCase
 {
     protected function tearDown(): void
     {
@@ -34,7 +34,7 @@ class AmazonAdvertisingApiTest extends TestCase
      */
     public function testConstructorSetsPropertiesCorrectly()
     {
-        $api = new AmazonAdvertisingApi(
+        $api = new AmazonProductApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag',
@@ -91,7 +91,7 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = new AmazonAdvertisingApi(
+        $api = new AmazonProductApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
@@ -140,7 +140,7 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = new AmazonAdvertisingApi(
+        $api = new AmazonProductApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
@@ -179,7 +179,7 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = new AmazonAdvertisingApi(
+        $api = new AmazonProductApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
