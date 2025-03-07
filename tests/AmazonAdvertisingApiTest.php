@@ -91,11 +91,11 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = Mockery::mock(AmazonAdvertisingApi::class, [
+        $api = new AmazonAdvertisingApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
-        ])->makePartial();
+        );
         
         $reflection = new ReflectionClass($api);
         $http_client_prop = $reflection->getProperty('http_client');
@@ -140,11 +140,11 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = Mockery::mock(AmazonAdvertisingApi::class, [
+        $api = new AmazonAdvertisingApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
-        ])->makePartial();
+        );
         
         $reflection = new ReflectionClass($api);
         $http_client_prop = $reflection->getProperty('http_client');
@@ -179,11 +179,11 @@ class AmazonAdvertisingApiTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         // Create the API instance with a mocked HTTP client
-        $api = Mockery::mock(AmazonAdvertisingApi::class, [
+        $api = new AmazonAdvertisingApi(
             'test-access-key',
             'test-secret-key',
             'test-partner-tag'
-        ])->makePartial();
+        );
         
         $reflection = new ReflectionClass($api);
         $http_client_prop = $reflection->getProperty('http_client');
