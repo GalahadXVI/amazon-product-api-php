@@ -1,5 +1,7 @@
 # Amazon Product Advertising API 5.0 PHP Client
 
+> **Note:** This package is currently in progress and under active development. Features may change and the API is not yet stable.
+
 A lightweight PHP package for interacting with Amazon's Product Advertising API 5.0. This package provides a simple and reliable way to fetch product data from Amazon's catalog using the Product Advertising API.
 
 ## Features
