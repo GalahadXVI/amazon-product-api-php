@@ -1,12 +1,13 @@
 # Amazon Product Advertising API 5.0 PHP Client
 
 > **Note:** This package is currently in progress and under active development. Features may change and the API is not yet stable.
+> **Important:** Currently, this package only supports the GetItems operation. Other PA-API operations like SearchItems, GetBrowseNodes, etc. are not yet implemented.
 
 A lightweight PHP package for interacting with Amazon's Product Advertising API 5.0. This package provides a simple and reliable way to fetch product data from Amazon's catalog using the Product Advertising API.
 
 ## Features
 
-- Simple, straightforward API for getting Amazon product information
+- Simple, straightforward API for getting Amazon product information via GetItems operation
 - Handles AWS v4 request signing
 - Supports all Amazon marketplaces
 - Fully unit tested
@@ -160,9 +161,21 @@ The package includes a comprehensive test suite. You can run the tests with the 
 composer test
 ```
 
+## Available Operations
+
+Currently, this package only supports the following PA-API operations:
+
+- `GetItems` - Retrieve product information for one or more ASINs
+- `GetItem` - Convenience method to retrieve product information for a single ASIN
+
+Future releases will add support for additional operations such as:
+- SearchItems
+- GetBrowseNodes
+- GetVariations
+
 ## Extending
 
-If you need to support additional operations beyond `GetItems`, you can extend the `AmazonAdvertisingApi` class:
+While this package currently only supports the GetItems operation, you can extend the `AmazonAdvertisingApi` class to add support for additional operations:
 
 ```php
 use Custom\AmazonAdvertisingApi\AmazonAdvertisingApi;
@@ -178,6 +191,8 @@ class ExtendedAmazonApi extends AmazonAdvertisingApi
     }
 }
 ```
+
+Please note that while you can extend the class to add more operations, we recommend waiting for official support in future releases to ensure proper implementation and testing.
 
 ## License
 
