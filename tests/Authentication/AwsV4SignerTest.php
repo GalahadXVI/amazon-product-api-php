@@ -1,8 +1,8 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Tests\Authentication;
+namespace GalahadXVI\AmazonProductApi\Tests\Authentication;
 
-use Custom\AmazonAdvertisingApi\Authentication\AwsV4Signer;
+use GalahadXVI\AmazonProductApi\Authentication\AwsV4Signer;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 

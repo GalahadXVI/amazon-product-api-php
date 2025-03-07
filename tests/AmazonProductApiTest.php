@@ -1,11 +1,11 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Tests;
+namespace GalahadXVI\AmazonProductApi\Tests;
 
-use Custom\AmazonAdvertisingApi\AmazonProductApi;
-use Custom\AmazonAdvertisingApi\Enums\Region;
-use Custom\AmazonAdvertisingApi\Enums\Resource;
-use Custom\AmazonAdvertisingApi\Exception\AmazonAdvertisingApiException;
+use GalahadXVI\AmazonProductApi\AmazonProductApi;
+use GalahadXVI\AmazonProductApi\Enums\Region;
+use GalahadXVI\AmazonProductApi\Enums\Resource;
+use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;

@@ -14,12 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Custom\\AmazonAdvertisingApi\\": "src/"
+            "GalahadXVI\\AmazonProductApi\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Custom\\AmazonAdvertisingApi\\Tests\\": "tests/"
+            "GalahadXVI\\AmazonProductApi\\Tests\\": "tests/"
         }
     },
     "scripts": {

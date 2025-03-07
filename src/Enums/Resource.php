@@ -1,13 +1,13 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Enums;
+namespace GalahadXVI\AmazonProductApi\Enums;
 
 /**
  * Class Resource
  * 
  * Contains constants for Amazon Product Advertising API resource types
  * 
- * @package Custom\AmazonAdvertisingApi\Enums
+ * @package GalahadXVI\AmazonProductApi\Enums
  */
 class Resource
 {

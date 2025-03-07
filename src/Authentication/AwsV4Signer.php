@@ -1,13 +1,13 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Authentication;
+namespace GalahadXVI\AmazonProductApi\Authentication;
 
 /**
  * Class AwsV4Signer
  * 
  * Handles AWS v4 signature generation for Amazon Product Advertising API requests
  * 
- * @package Custom\AmazonAdvertisingApi\Authentication
+ * @package GalahadXVI\AmazonProductApi\Authentication
  */
 class AwsV4Signer
 {

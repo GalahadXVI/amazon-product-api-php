@@ -1,13 +1,13 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Enums;
+namespace GalahadXVI\AmazonProductApi\Enums;
 
 /**
  * Class Region
  * 
  * Contains constants for Amazon Product Advertising API regions
  * 
- * @package Custom\AmazonAdvertisingApi\Enums
+ * @package GalahadXVI\AmazonProductApi\Enums
  */
 class Region
 {

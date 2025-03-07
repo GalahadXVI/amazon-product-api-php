@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Custom\AmazonAdvertisingApi\AmazonProductApi;
-use Custom\AmazonAdvertisingApi\Enums\Region;
-use Custom\AmazonAdvertisingApi\Enums\Resource;
-use Custom\AmazonAdvertisingApi\Exception\AmazonAdvertisingApiException;
+use GalahadXVI\AmazonProductApi\AmazonProductApi;
+use GalahadXVI\AmazonProductApi\Enums\Region;
+use GalahadXVI\AmazonProductApi\Enums\Resource;
+use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 
 // Replace with your own credentials
 $access_key = 'YOUR_ACCESS_KEY';

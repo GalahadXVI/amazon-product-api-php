@@ -1,10 +1,10 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi;
+namespace GalahadXVI\AmazonProductApi;
 
-use Custom\AmazonAdvertisingApi\Authentication\AwsV4Signer;
-use Custom\AmazonAdvertisingApi\Enums\Region;
-use Custom\AmazonAdvertisingApi\Exception\AmazonAdvertisingApiException;
+use GalahadXVI\AmazonProductApi\Authentication\AwsV4Signer;
+use GalahadXVI\AmazonProductApi\Enums\Region;
+use GalahadXVI\AmazonProductApi\Exception\AmazonAdvertisingApiException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -13,7 +13,7 @@ use GuzzleHttp\Exception\GuzzleException;
  * 
  * Main client for interacting with Amazon's Product Advertising API 5.0
  * 
- * @package Custom\AmazonAdvertisingApi
+ * @package GalagadXVI\AmazonProductApi
  */
 class AmazonProductApi
 {

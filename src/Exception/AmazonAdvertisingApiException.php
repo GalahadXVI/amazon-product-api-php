@@ -1,6 +1,6 @@
 <?php
 
-namespace Custom\AmazonAdvertisingApi\Exception;
+namespace GalahadXVI\AmazonProductApi\Exception;
 
 use Exception;
 
@@ -9,7 +9,7 @@ use Exception;
  * 
  * Custom exception for Amazon Product Advertising API errors
  * 
- * @package Custom\AmazonAdvertisingApi\Exception
+ * @package GalahadXVI\AmazonProductApi\Exception
  */
 class AmazonAdvertisingApiException extends Exception
 {
