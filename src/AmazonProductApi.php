@@ -110,7 +110,6 @@ class AmazonProductApi
             ],
             'PartnerTag'  => $this->partner_tag,
             'PartnerType' => 'Associates',
-            'Marketplace' => Region::getHost($this->country_code),
         ];
         
         $json_payload = json_encode($payload);
