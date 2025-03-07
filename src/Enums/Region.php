@@ -93,4 +93,36 @@ class Region
         
         return $hosts[$country_code] ?? 'webservices.amazon.com';
     }
+
+    /**
+     * Check if a country code is valid
+     *
+     * @param string $country_code
+     * @return bool
+     */
+    public static function isValid(string $country_code): bool
+    {
+        $valid_codes = [
+            self::AUSTRALIA,
+            self::BRAZIL,
+            self::CANADA,
+            self::FRANCE,
+            self::GERMANY,
+            self::INDIA,
+            self::ITALY,
+            self::JAPAN,
+            self::MEXICO,
+            self::NETHERLANDS,
+            self::SINGAPORE,
+            self::SAUDI_ARABIA,
+            self::SPAIN,
+            self::SWEDEN,
+            self::TURKEY,
+            self::UNITED_ARAB_EMIRATES,
+            self::UNITED_KINGDOM,
+            self::UNITED_STATES,
+        ];
+
+        return in_array($country_code, $valid_codes, true);
+    }
 } 
