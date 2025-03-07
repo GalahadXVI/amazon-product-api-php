@@ -23,7 +23,7 @@ A lightweight PHP package for interacting with Amazon's Product Advertising API 
 You can install the package via composer:
 
 ```bash
-composer require custom/amazon-advertising-api
+composer require galahadxvi/amazon-product-api-php
 ```
 
 ## Usage
