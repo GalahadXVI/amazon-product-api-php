@@ -78,6 +78,14 @@ class AmazonProductApi
      */
     public function __construct(string $access_key, string $secret_key, string $partner_tag, string $country_code = Region::UNITED_STATES)
     {
+        if (empty($access_key) || empty($secret_key) || empty($partner_tag)) {
+            throw new \InvalidArgumentException('Access key, secret key, and partner tag cannot be empty');
+        }
+
+        if (!Region::isValid($country_code)) {
+            throw new \InvalidArgumentException('Invalid country code provided');
+        }
+
         $this->access_key = $access_key;
         $this->secret_key = $secret_key;
         $this->partner_tag = $partner_tag;
@@ -97,10 +105,26 @@ class AmazonProductApi
      * @param array $item_ids Array of ASINs
      * @param array $resources Array of resources to include in the response
      * @return array
+     * @throws \InvalidArgumentException
      * @throws AmazonAdvertisingApiException
      */
     public function getItems(array $item_ids, array $resources = []): array
     {
+        if (empty($item_ids)) {
+            throw new \InvalidArgumentException('Item IDs array cannot be empty');
+        }
+
+        if (count($item_ids) > 10) {
+            throw new \InvalidArgumentException('Maximum of 10 ASINs allowed per request');
+        }
+
+        // Validate ASIN format
+        foreach ($item_ids as $asin) {
+            if (!preg_match('/^[A-Z0-9]{10}$/', $asin)) {
+                throw new \InvalidArgumentException('Invalid ASIN format: ' . $asin);
+            }
+        }
+
         // Build payload
         $payload = [
             'ItemIds'     => $item_ids,
@@ -144,7 +168,17 @@ class AmazonProductApi
                 'body'    => $json_payload,
             ]);
             
-            return json_decode($response->getBody()->getContents(), true);
+            $response_data = json_decode($response->getBody()->getContents(), true);
+            
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new AmazonAdvertisingApiException('Failed to decode response: ' . json_last_error_msg());
+            }
+
+            if (!is_array($response_data)) {
+                throw new AmazonAdvertisingApiException('Invalid response format: expected array');
+            }
+
+            return $response_data;
         } catch (GuzzleException $e) {
             throw new AmazonAdvertisingApiException("Request failed: " . $e->getMessage(), $e->getCode(), $e);
         }
